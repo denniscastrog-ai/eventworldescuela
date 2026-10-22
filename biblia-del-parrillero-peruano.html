@@ -177,6 +177,36 @@
   .refs li{padding:10px 0; border-bottom:1px dashed var(--line); font-size:.92em; color:var(--ivory-dim);}
   .refs li b{color:var(--ivory); display:block; margin-bottom:2px;}
 
+  /* ---------- Página "este ejemplar es personal" ---------- */
+  .ownership-box{margin:1.8em 0 1em;}
+  .of-field{margin-bottom:1.5em;}
+  .of-field span{display:block; font-size:.74em; text-transform:uppercase; letter-spacing:1px; color:var(--gold); margin-bottom:.35em;}
+  .of-field .linea{border-bottom:1px solid var(--line); height:1.9em;}
+
+  /* ---------- Repaso de capítulo (tarea / autoevaluación) ---------- */
+  .repaso{
+    border:2px dashed var(--gold); border-radius:8px; background:var(--carbon-2);
+    padding:26px 28px 30px; margin:2.4em 0 1em; page-break-inside: avoid;
+  }
+  .repaso .repaso-kicker{
+    font-family:var(--font-body); text-transform:uppercase; letter-spacing:2px;
+    color:var(--gold); font-size:.72em; font-weight:700; margin-bottom:.4em;
+  }
+  .repaso h4{
+    font-family:var(--font-display); font-weight:400; text-transform:none; letter-spacing:0;
+    color:var(--gold-soft); font-size:1.2em; margin-top:0;
+  }
+  .checklist{list-style:none; padding:0; margin:0 0 1.5em;}
+  .checklist li{display:flex; gap:10px; align-items:flex-start; margin-bottom:.6em; color:var(--ivory-dim);}
+  .checklist input[type="checkbox"]{margin-top:4px; width:16px; height:16px; accent-color:var(--gold); flex-shrink:0;}
+  .pregunta{margin-bottom:1.5em;}
+  .pregunta p.q{color:var(--ivory); margin:0 0 .5em; font-weight:700;}
+  .pregunta .linea{border-bottom:1px solid var(--line); height:1.9em;}
+  @media print{
+    .of-field .linea, .pregunta .linea{border-bottom:1px solid #777;}
+    .repaso{border-color:#777;}
+  }
+
   @media print{
     body{background:white; color:#1a1a1a;}
     /* En impresión real conviene exportar con "Fondos gráficos" activado para conservar el carbón de marca; */
@@ -203,6 +233,21 @@
     <div class="fire-rule"></div>
     <p class="subtitle">Del primer carbón al asado perfecto — la guía para elegir el corte correcto, dominar el fuego y servir una parrilla memorable, tengas parrilla, Kamado, sartén o solo un horno en casa.</p>
     <div class="author">Dennis Castro<br><small>Fundador de Carnes Delivery Premium</small></div>
+  </div>
+</section>
+
+<!-- ======================= EJEMPLAR PERSONAL ======================= -->
+<section class="chapter">
+  <div class="page">
+    <div class="kicker">Tu ejemplar</div>
+    <h1>Este ejemplar es personal</h1>
+    <p class="lead">Preparamos esta copia especialmente para ti como cliente de Carnes Delivery Premium. Tu copia digital está protegida con una contraseña única asociada a tu compra — te pedimos no compartirla ni reenviar el archivo.</p>
+    <div class="ownership-box">
+      <div class="of-field"><span>Nombre completo</span><div class="linea"></div></div>
+      <div class="of-field"><span>Correo electrónico</span><div class="linea"></div></div>
+      <div class="of-field"><span>Fecha</span><div class="linea"></div></div>
+    </div>
+    <div class="tip">Si vas a imprimir este libro para usarlo junto a la parrilla, aprovecha los espacios de "Repaso del capítulo" al final de cada uno: son tuyos para tomar apuntes, responder las preguntas y anotar tus propios tiempos y ajustes. Esa es tu copia, hecha a tu medida — por eso tampoco vale la pena prestarla, lo interesante se construye mientras la usas.</div>
   </div>
 </section>
 
@@ -316,6 +361,34 @@
         <li>Supervisa siempre la parrilla encendida cuando hay niños o mascotas cerca.</li>
       </ul>
     </div>
+
+    <div class="repaso">
+      <div class="repaso-kicker">Repaso del capítulo 1</div>
+      <h4>Lo esencial que debe quedarte grabado</h4>
+      <ul class="checklist">
+        <li><input type="checkbox"> Reconocer una brasa lista: ceniza gris por fuera, brillo naranja por dentro, sin llamas altas.</li>
+        <li><input type="checkbox"> Distinguir fuego alto, medio e indirecto, y para qué sirve cada uno.</li>
+        <li><input type="checkbox"> Nunca usar líquido encendedor sobre brasas ya calientes.</li>
+        <li><input type="checkbox"> Jamás encender carbón en un espacio cerrado sin ventilación.</li>
+      </ul>
+      <h4>Preguntas para repasar</h4>
+      <div class="pregunta">
+        <p class="q">1. ¿Cómo reconoces que las brasas están listas para empezar a cocinar?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+      <div class="pregunta">
+        <p class="q">2. ¿Qué diferencia hay entre fuego alto, medio e indirecto, y cuándo usarías cada uno?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+      <div class="pregunta">
+        <p class="q">3. Menciona dos reglas de seguridad de este capítulo que no vas a saltarte nunca.</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+      <div class="pregunta">
+        <p class="q">4. Apunta aquí el carbón que sueles usar en casa — ¿cambiarías algo después de leer este capítulo?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -381,6 +454,30 @@
       </div>
     </div>
     <div class="warn">No todos los cortes funcionan igual en todos los equipos. Un brisket o unas costillas gruesas no son una preparación rápida en ningún equipo: necesitan cocción prolongada a baja temperatura, sea en Kamado, cilindro, caja china u horno. Intentar "apurarlas" a fuego alto reseca la carne por fuera sin ablandar el colágeno por dentro.</div>
+
+    <div class="repaso">
+      <div class="repaso-kicker">Repaso del capítulo 2</div>
+      <h4>Lo esencial que debe quedarte grabado</h4>
+      <ul class="checklist">
+        <li><input type="checkbox"> La parrilla tradicional es la más versátil, pero el resultado depende de tu manejo del fuego, no del equipo en sí.</li>
+        <li><input type="checkbox"> El horno es tu mejor aliado para piezas gruesas o enteras cuando no vas a usar carbón.</li>
+        <li><input type="checkbox"> Un brisket, unas costillas gruesas o una panceta nunca son preparaciones rápidas, en ningún equipo.</li>
+        <li><input type="checkbox"> Sin espacio exterior, sartén + horno es la combinación que mejor compensa la falta de parrilla.</li>
+      </ul>
+      <h4>Preguntas para repasar</h4>
+      <div class="pregunta">
+        <p class="q">1. ¿Qué equipo tienes en casa, y qué cortes de este libro puedes preparar bien con él?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+      <div class="pregunta">
+        <p class="q">2. ¿Por qué un tomahawk no debería ir directo a fuego alto desde el inicio?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+      <div class="pregunta">
+        <p class="q">3. Si no tienes espacio exterior, ¿qué combinación de equipo usarías para lograr una buena costra?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -612,6 +709,34 @@
       </div>
       <div class="tip">Para servir: la <b>mermelada picante</b> de la casa funciona como condimento de cierre — su dulzor con picor contrasta bien con la grasa del embutido, especialmente con las variedades parrillero y maple. Sírvela aparte, no sobre el embutido entero, para que cada invitado dose a su gusto.</div>
     </div>
+
+    <div class="repaso">
+      <div class="repaso-kicker">Repaso del capítulo 3</div>
+      <h4>Lo esencial que debe quedarte grabado</h4>
+      <ul class="checklist">
+        <li><input type="checkbox"> Tomahawk, cowboy y ribeye son el mismo músculo; lo que cambia es el hueso, no el sabor.</li>
+        <li><input type="checkbox"> La picaña no es sinónimo de "cuadril" en general: es una pieza específica con su capa de grasa característica.</li>
+        <li><input type="checkbox"> Los nombres comerciales cambian según el proveedor — confirma el corte por su descripción física, no solo por el nombre.</li>
+        <li><input type="checkbox"> Costillas y brisket exigen cocción prolongada a baja temperatura: nunca son un corte rápido.</li>
+      </ul>
+      <h4>Preguntas para repasar</h4>
+      <div class="pregunta">
+        <p class="q">1. ¿Cuál es la diferencia real entre un tomahawk y un cowboy steak?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+      <div class="pregunta">
+        <p class="q">2. Para una entraña, ¿cuál es el error más común y cómo lo evitas?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+      <div class="pregunta">
+        <p class="q">3. Si tu próxima parrillada es para 6 personas y solo tienes un Kamado, ¿qué corte comprarías y por qué?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+      <div class="pregunta">
+        <p class="q">4. Escribe aquí tu corte favorito de este capítulo y los dos datos que más te sorprendieron.</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -777,6 +902,30 @@
     </table>
     </div>
     <p>Como regla general: a más grasa en el corte, el vino (o la bebida) necesita más acidez o cuerpo para no quedar "aplastado" por el sabor de la carne. Estas son guías de punto de partida, no reglas absolutas — el mejor maridaje es el que a ti y tus invitados les gusta tomar.</p>
+
+    <div class="repaso">
+      <div class="repaso-kicker">Repaso del capítulo 4</div>
+      <h4>Lo esencial que debe quedarte grabado</h4>
+      <ul class="checklist">
+        <li><input type="checkbox"> Sellar es formar costra a fuego alto; luego se termina a fuego medio para no quemar el exterior.</li>
+        <li><input type="checkbox"> En piezas gruesas el orden se invierte: cocción indirecta primero, sellado corto al final.</li>
+        <li><input type="checkbox"> Siempre se corta contra la fibra, nunca a favor.</li>
+        <li><input type="checkbox"> Organizar la parrillada por tiempos evita que todo llegue frío o todo llegue tarde a la mesa.</li>
+      </ul>
+      <h4>Preguntas para repasar</h4>
+      <div class="pregunta">
+        <p class="q">1. ¿Por qué se corta siempre contra la fibra y no a favor?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+      <div class="pregunta">
+        <p class="q">2. Arma tu propia línea de tiempo para tu próxima parrillada: ¿qué harías primero, qué dejarías para el final?</p>
+        <div class="linea"></div><div class="linea"></div><div class="linea"></div>
+      </div>
+      <div class="pregunta">
+        <p class="q">3. ¿Qué maridaje elegirías para una picaña, y por qué funciona mejor que otra opción?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -823,6 +972,30 @@
 
     <h2>5.4 Prevención de incendios (recordatorio)</h2>
     <p>Repasa el apartado 1.4: ventilación adecuada, distancia de materiales inflamables, elemento para sofocar fuego a la mano, y nunca usar la parrilla de carbón en espacios cerrados.</p>
+
+    <div class="repaso">
+      <div class="repaso-kicker">Repaso del capítulo 5</div>
+      <h4>Lo esencial que debe quedarte grabado</h4>
+      <ul class="checklist">
+        <li><input type="checkbox"> El termómetro es la única forma confiable de saber el punto real de una pieza; el color y el tiempo no bastan.</li>
+        <li><input type="checkbox"> Carne molida: siempre 71°C. Cortes enteros: mínimo 63°C con 3 minutos de reposo. Aves: 74°C.</li>
+        <li><input type="checkbox"> El punto gastronómico preferido es una decisión personal; la temperatura segura no es negociable, sobre todo en carne molida.</li>
+        <li><input type="checkbox"> Nunca marinar ni descongelar a temperatura ambiente sobre la mesa.</li>
+      </ul>
+      <h4>Preguntas para repasar</h4>
+      <div class="pregunta">
+        <p class="q">1. ¿Cuál es la diferencia entre "temperatura segura" y "punto gastronómico preferido"?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+      <div class="pregunta">
+        <p class="q">2. ¿Por qué la carne molida siempre debe llegar a 71°C, mientras que un bife entero puede quedarse en un término más bajo?</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+      <div class="pregunta">
+        <p class="q">3. Menciona dos reglas de manipulación de carne cruda que vas a aplicar desde ahora en tu cocina.</p>
+        <div class="linea"></div><div class="linea"></div>
+      </div>
+    </div>
   </div>
 </section>
 

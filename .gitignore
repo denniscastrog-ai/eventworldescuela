@@ -1,0 +1,5 @@
+# Copias personalizadas generadas para clientes (contienen datos
+# personales y contraseñas reales — nunca deben subirse al repositorio).
+entregas/
+*_registro_contrasenas.csv
+registro_contrasenas.csv
