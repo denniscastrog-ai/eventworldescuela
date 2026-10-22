@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Biblia del Parrillero Peruano — Del primer carbón al asado perfecto</title>
+<meta name="author" content="Dennis Castro, fundador de Carnes Delivery Premium">
+<meta name="description" content="Guía completa para elegir y preparar cortes premium en casa, con cualquier equipo: parrilla, Kamado, sartén, horno, caja china o cilindro.">
+<style>
+  :root{
+    --carbon:#141210;
+    --carbon-2:#1d1a16;
+    --carbon-3:#26211b;
+    --ivory:#f3ecdd;
+    --ivory-dim:#cfc5ad;
+    --gold:#c9a227;
+    --gold-soft:#e3c565;
+    --line:#3a3326;
+    --red-ember:#b5451b;
+    --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--carbon);
+    color:var(--ivory);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+  }
+  .page{
+    max-width:880px;
+    margin:0 auto;
+    padding:48px 40px;
+  }
+  h1,h2,h3,h4{
+    font-family:var(--font-display);
+    color:var(--gold-soft);
+    letter-spacing:.3px;
+    margin:0 0 .4em;
+  }
+  h1{font-size:2.1em;}
+  h2{font-size:1.55em; border-bottom:1px solid var(--line); padding-bottom:.3em; margin-top:1.4em;}
+  h3{font-size:1.2em; color:var(--ivory); margin-top:1.2em;}
+  h4{font-size:1.02em; color:var(--gold); text-transform:uppercase; letter-spacing:1px; font-family:var(--font-body); font-weight:700; margin-top:1em; margin-bottom:.3em;}
+  p{margin:0 0 1em; color:var(--ivory-dim);}
+  a{color:var(--gold-soft); text-decoration:none; border-bottom:1px dotted var(--gold);}
+  a:hover{color:var(--gold);}
+  small{color:var(--ivory-dim); opacity:.85;}
+  .kicker{
+    font-family:var(--font-body); text-transform:uppercase; letter-spacing:2px;
+    color:var(--gold); font-size:.72em; font-weight:700; margin-bottom:.6em;
+  }
+  .lead{font-size:1.08em; color:var(--ivory);}
+
+  /* ---------- Cover ---------- */
+  .cover{
+    min-height:92vh;
+    display:flex; flex-direction:column; justify-content:center; align-items:flex-start;
+    background:
+      radial-gradient(ellipse at 70% 20%, rgba(201,162,39,.12), transparent 55%),
+      radial-gradient(ellipse at 10% 90%, rgba(181,69,27,.14), transparent 50%),
+      linear-gradient(180deg, var(--carbon) 0%, var(--carbon-2) 100%);
+    border-bottom:2px solid var(--gold);
+    position:relative;
+    page-break-after: always;
+  }
+  .cover .brand-mark{
+    font-family:var(--font-body); font-weight:700; letter-spacing:3px; text-transform:uppercase;
+    font-size:.78em; color:var(--gold-soft); border:1px solid var(--gold); padding:6px 14px; border-radius:2px;
+    margin-bottom:2.2em;
+  }
+  .cover h1{
+    font-size:3.1em; line-height:1.08; color:var(--ivory); margin-bottom:.25em; max-width:680px;
+  }
+  .cover h1 em{ color:var(--gold-soft); font-style:normal; display:block; }
+  .cover .subtitle{font-size:1.25em; color:var(--ivory-dim); max-width:560px; margin-bottom:2.4em;}
+  .cover .author{
+    font-family:var(--font-display); font-size:1.05em; color:var(--gold-soft);
+  }
+  .cover .author small{display:block; color:var(--ivory-dim); margin-top:.15em; font-family:var(--font-body);}
+  .fire-rule{
+    width:100%; height:3px; margin:1.6em 0;
+    background:linear-gradient(90deg, var(--red-ember), var(--gold) 45%, transparent 90%);
+  }
+
+  /* ---------- Chapters ---------- */
+  .chapter{ page-break-before: always; padding-top:10px; }
+  .chapter-num{
+    font-family:var(--font-body); color:var(--red-ember); font-weight:700; letter-spacing:2px;
+    text-transform:uppercase; font-size:.78em; margin-bottom:.3em;
+  }
+  .toc{list-style:none; padding:0; margin:0;}
+  .toc li{display:flex; justify-content:space-between; gap:10px; padding:10px 0; border-bottom:1px dashed var(--line);}
+  .toc .t{color:var(--ivory);}
+  .toc .d{color:var(--ivory-dim); font-size:.92em;}
+
+  /* ---------- Tables ---------- */
+  table{width:100%; border-collapse:collapse; margin:1.1em 0 1.6em; font-size:.94em;}
+  caption{ text-align:left; color:var(--gold); font-weight:700; margin-bottom:.4em; font-size:.85em; text-transform:uppercase; letter-spacing:1px;}
+  th, td{ border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top;}
+  th{ background:var(--carbon-3); color:var(--gold-soft); font-family:var(--font-body); font-weight:700; font-size:.88em; text-transform:uppercase; letter-spacing:.4px;}
+  td{background:rgba(255,255,255,.015);}
+  tr:nth-child(even) td{background:rgba(255,255,255,.035);}
+  .table-wrap{overflow-x:auto;}
+
+  /* ---------- Cut cards (fichas técnicas) ---------- */
+  .ficha{
+    border:1px solid var(--line); background:var(--carbon-2); border-radius:6px;
+    padding:28px 28px 8px; margin:1.6em 0 2.4em; page-break-inside: avoid;
+  }
+  .ficha-head{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; border-bottom:1px solid var(--line); padding-bottom:12px; margin-bottom:6px;}
+  .ficha-head h3{margin:0; font-size:1.5em; color:var(--gold-soft);}
+  .tag-row{display:flex; gap:8px; flex-wrap:wrap; margin:.2em 0 1em;}
+  .tag{
+    font-size:.72em; text-transform:uppercase; letter-spacing:.6px; font-weight:700;
+    padding:4px 10px; border-radius:20px; border:1px solid var(--gold); color:var(--gold-soft);
+  }
+  .tag.dificil{border-color:var(--red-ember); color:#e08a60;}
+  .tag.facil{border-color:#6f9c5f; color:#9fcf8c;}
+  .tag.media{border-color:var(--gold); color:var(--gold-soft);}
+  .field{margin-bottom:1em;}
+  .field h4{margin-bottom:.25em;}
+  .field p, .field ul, .field ol{margin:0;}
+  .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  .equiv-list{list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:8px 18px;}
+  .equiv-list li{color:var(--ivory-dim); font-size:.93em;}
+  .equiv-list li b{color:var(--ivory);}
+  .steps{padding-left:1.2em;}
+  .steps li{margin-bottom:.5em; color:var(--ivory-dim);}
+  .warn{
+    border-left:3px solid var(--red-ember); background:rgba(181,69,27,.08);
+    padding:10px 14px; margin:.8em 0; font-size:.93em; color:var(--ivory-dim); border-radius:2px;
+  }
+  .tip{
+    border-left:3px solid var(--gold); background:rgba(201,162,39,.08);
+    padding:10px 14px; margin:.8em 0; font-size:.93em; color:var(--ivory-dim); border-radius:2px;
+  }
+
+  /* ---------- Recipes ---------- */
+  .receta{ border:1px solid var(--line); border-radius:6px; padding:26px 28px; margin:1.6em 0 2.4em; background:var(--carbon-2); page-break-inside: avoid;}
+  .receta-meta{display:flex; gap:22px; flex-wrap:wrap; font-size:.85em; color:var(--ivory-dim); margin:.4em 0 1.1em; border-bottom:1px solid var(--line); padding-bottom:12px;}
+  .receta-meta span b{color:var(--gold-soft); display:block; font-size:.78em; text-transform:uppercase; letter-spacing:.5px; font-weight:700;}
+  .receta ul.ingredientes{ columns:2; column-gap:30px; list-style:disc; padding-left:1.1em; margin:0 0 1em;}
+  .receta ul.ingredientes li{margin-bottom:.4em; color:var(--ivory-dim); break-inside:avoid;}
+
+  /* ---------- Fire diagrams ---------- */
+  .diagram-row{display:flex; gap:20px; flex-wrap:wrap; margin:1.2em 0 1.6em;}
+  .diagram-card{flex:1; min-width:220px; background:var(--carbon-2); border:1px solid var(--line); border-radius:6px; padding:16px; text-align:center;}
+  .diagram-card figcaption{font-size:.85em; color:var(--ivory-dim); margin-top:.6em;}
+  .diagram-card svg{max-width:100%; height:auto;}
+
+  /* ---------- Equipment comparison icons ---------- */
+  .equipo-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; margin:1.4em 0;}
+  .equipo-card{background:var(--carbon-2); border:1px solid var(--line); border-radius:6px; padding:20px;}
+  .equipo-card h4{display:flex; align-items:center; gap:8px; color:var(--gold-soft); font-family:var(--font-display); font-size:1.1em; text-transform:none; letter-spacing:0; font-weight:400;}
+  .equipo-card ul{margin:.6em 0 0; padding-left:1.1em; color:var(--ivory-dim); font-size:.92em;}
+  .equipo-card .limite{margin-top:.8em; font-size:.85em; color:#e08a60;}
+
+  .brand-note{
+    margin-top:2.4em; padding-top:1.4em; border-top:1px solid var(--line);
+    font-size:.85em; color:var(--ivory-dim);
+  }
+  .brand-note b{color:var(--gold-soft);}
+
+  footer.page-footer{
+    text-align:center; color:var(--ivory-dim); font-size:.8em; padding:30px 0 60px; opacity:.7;
+  }
+
+  blockquote{
+    border-left:3px solid var(--gold); margin:1.2em 0; padding:.4em 1.2em; color:var(--ivory-dim); font-style:italic;
+  }
+
+  .refs{list-style:none; padding:0; margin:0;}
+  .refs li{padding:10px 0; border-bottom:1px dashed var(--line); font-size:.92em; color:var(--ivory-dim);}
+  .refs li b{color:var(--ivory); display:block; margin-bottom:2px;}
+
+  @media print{
+    body{background:white; color:#1a1a1a;}
+    /* En impresión real conviene exportar con "Fondos gráficos" activado para conservar el carbón de marca; */
+    .page{padding:30px 10px;}
+    a{border-bottom:none;}
+  }
+  @page{ size:A4; margin:14mm 12mm; }
+
+  @media (max-width:640px){
+    .page{padding:30px 18px;}
+    .grid-2{grid-template-columns:1fr;}
+    .cover h1{font-size:2.1em;}
+    .receta ul.ingredientes{columns:1;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ======================= PORTADA ======================= -->
+<section class="cover">
+  <div class="page">
+    <div class="brand-mark">Carnes Delivery Premium</div>
+    <h1>La Biblia<br>del Parrillero<br><em>Peruano</em></h1>
+    <div class="fire-rule"></div>
+    <p class="subtitle">Del primer carbón al asado perfecto — la guía para elegir el corte correcto, dominar el fuego y servir una parrilla memorable, tengas parrilla, Kamado, sartén o solo un horno en casa.</p>
+    <div class="author">Dennis Castro<br><small>Fundador de Carnes Delivery Premium</small></div>
+  </div>
+</section>
+
+<!-- ======================= INTRO ======================= -->
+<section class="chapter">
+  <div class="page">
+    <div class="kicker">Bienvenida</div>
+    <h1>Antes de prender el carbón</h1>
+    <p class="lead">Esta guía nace de una idea simple: un buen corte merece ser bien tratado, y tratarlo bien no debería requerir años de experiencia ni equipo profesional.</p>
+    <p>En Carnes Delivery Premium seleccionamos los cortes; este libro te enseña a sacarles el máximo provecho en tu propia casa, sin importar si tienes una parrilla de ladrillo en el patio, un Kamado nuevo, una sartén de hierro o simplemente un horno y ganas de aprender.</p>
+    <p>Está escrito para dos tipos de lector. Si es tu primera vez frente al carbón, cada capítulo empieza desde cero: qué comprar, qué temperatura buscar, cómo saber si ya está listo. Si ya cocinas carnes seguido y quieres afinar la técnica, encontrarás fichas comparativas, tiempos orientativos y los errores más comunes que incluso un parrillero con experiencia comete de vez en cuando.</p>
+    <p>No vas a encontrar aquí trucos mágicos ni promesas de "receta infalible en 5 minutos". Vas a encontrar lo que realmente funciona: control de temperatura, respeto por el corte y un poco de paciencia. El resto lo pone el fuego.</p>
+    <div class="tip">Cómo usar este libro: no necesitas leerlo de corrido. El Capítulo 2 te dice qué corte conviene según tu equipo; el Capítulo 3 es la ficha técnica de cada corte para consultar mientras cocinas; el Capítulo 4 trae las técnicas y recetas de acompañamiento. Guárdalo cerca de la parrilla.</div>
+
+    <h2>Índice</h2>
+    <ul class="toc">
+      <li><div><span class="t">Capítulo 1</span> — Antes de encender: carbón, fuego y seguridad</div><span class="d">Zonas de calor, encendido, prevención de incendios</span></li>
+      <li><div><span class="t">Capítulo 2</span> — ¿Qué corte preparo en cada equipo?</div><span class="d">Parrilla, sartén, horno, Kamado, caja china, sin parrilla</span></li>
+      <li><div><span class="t">Capítulo 3</span> — Fichas técnicas de los cortes</div><span class="d">Picaña, bifes, entraña, tomahawk, costillas y más</span></li>
+      <li><div><span class="t">Capítulo 4</span> — Técnicas y recetas imprescindibles</div><span class="d">Sellado, cocción indirecta, chimichurri, salsa criolla, maridaje</span></li>
+      <li><div><span class="t">Capítulo 5</span> — Seguridad alimentaria</div><span class="d">Temperaturas seguras, termómetro, manejo de carne cruda</span></li>
+      <li><div><span class="t">Referencias</span></div><span class="d">Fuentes técnicas consultadas</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= CAPÍTULO 1 ======================= -->
+<section class="chapter">
+  <div class="page">
+    <div class="chapter-num">Capítulo 1</div>
+    <h1>Antes de encender: carbón, fuego y seguridad</h1>
+    <p class="lead">Todo lo demás en este libro —cortes, tiempos, puntos de cocción— depende de que sepas controlar el fuego. Empecemos por ahí.</p>
+
+    <h2>1.1 Qué carbón usar</h2>
+    <div class="table-wrap">
+    <table>
+      <caption>Tipos de carbón</caption>
+      <thead><tr><th>Tipo</th><th>Qué es</th><th>Cuándo conviene</th></tr></thead>
+      <tbody>
+        <tr><td><b>Carbón vegetal en trozos (lump charcoal)</b></td><td>Madera carbonizada directamente, sin aditivos. Arde más caliente y más rápido.</td><td>Cortes rápidos a fuego alto: bifes, entraña, picaña en porciones.</td></tr>
+        <tr><td><b>Briquetas</b></td><td>Carbón prensado en bloques uniformes, con aglutinantes. Arde más parejo y dura más tiempo.</td><td>Cocciones largas e indirectas: tomahawk entero, costillas, brisket.</td></tr>
+        <tr><td><b>Carbón de algarrobo</b></td><td>Lump charcoal de madera de algarrobo, muy usado en el norte peruano. Alto poder calórico, aroma propio.</td><td>Anticuchos, parrillas tradicionales, cuando buscas sabor ahumado marcado.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Para empezar, no te compliques: un lump charcoal de buena calidad te sirve para el 90% de lo que vas a cocinar en este libro. Las briquetas entran en juego cuando necesitas que el fuego dure más de una hora sin que tengas que estar recargando.</p>
+
+    <h2>1.2 Cómo encender carbón y reconocer brasas listas</h2>
+    <div class="receta">
+      <div class="receta-meta">
+        <span><b>Tiempo</b>20–30 min</span>
+        <span><b>Equipo</b>Chimenea de encendido (o estructura de leña)</span>
+        <span><b>Dificultad</b>Fácil</span>
+      </div>
+      <ol class="steps">
+        <li>Arruga 2–3 hojas de papel periódico (sin tinta a color) y colócalas en la base de la chimenea de encendido. Si no tienes chimenea, apílalas en el centro de la parrilla y construye un cono de carbón alrededor.</li>
+        <li>Llena la chimenea con carbón hasta el borde. No uses líquido encendedor ni gasolina: dejan sabor y son un riesgo de incendio innecesario.</li>
+        <li>Enciende el papel por la parte de abajo desde dos o tres puntos. El tiro de la chimenea hace que el fuego suba solo.</li>
+        <li>Espera 15–20 minutos. Sabrás que está lista cuando el carbón de arriba empiece a cubrirse de ceniza gris y, si vuelcas con cuidado, veas brasas naranjas parejas en la base.</li>
+        <li>Vuelca el carbón sobre la parrilla y arma tus zonas de fuego (ver 1.3) antes de que baje la temperatura.</li>
+      </ol>
+      <div class="tip">Brasa lista = ceniza gris por fuera, brillo naranja intenso por dentro, sin llamas altas. Si todavía hay llamas de más de 10 cm, espera unos minutos más antes de poner la carne: quemarías el exterior antes de que el interior avance.</div>
+    </div>
+
+    <h2>1.3 Zonas de fuego: alto, medio e indirecto</h2>
+    <p>La base de una buena parrillada no es un solo fuego parejo, sino varias zonas de temperatura distinta trabajando a la vez. Así puedes sellar en un lado y terminar de cocinar en otro, sin mover la carne de la parrilla ni perder el control.</p>
+    <div class="diagram-row">
+      <figure class="diagram-card">
+        <svg viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="5" width="210" height="150" rx="8" fill="#1d1a16" stroke="#3a3326"/>
+          <circle cx="60" cy="80" r="42" fill="#b5451b" opacity="0.85"/>
+          <circle cx="150" cy="80" r="30" fill="#c9a227" opacity="0.55"/>
+          <text x="60" y="84" text-anchor="middle" font-size="11" fill="#141210" font-family="Helvetica" font-weight="700">ALTO</text>
+          <text x="150" y="84" text-anchor="middle" font-size="11" fill="#141210" font-family="Helvetica" font-weight="700">MEDIO</text>
+        </svg>
+        <figcaption>Dos niveles de brasas: carbón apilado (fuego alto) y carbón en capa fina (fuego medio).</figcaption>
+      </figure>
+      <figure class="diagram-card">
+        <svg viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="5" width="210" height="150" rx="8" fill="#1d1a16" stroke="#3a3326"/>
+          <rect x="15" y="25" width="90" height="110" rx="6" fill="#b5451b" opacity="0.85"/>
+          <rect x="115" y="25" width="90" height="110" rx="6" fill="#26211b" stroke="#3a3326"/>
+          <text x="60" y="84" text-anchor="middle" font-size="11" fill="#141210" font-family="Helvetica" font-weight="700">BRASA</text>
+          <text x="160" y="84" text-anchor="middle" font-size="11" fill="#cfc5ad" font-family="Helvetica" font-weight="700">SIN BRASA</text>
+        </svg>
+        <figcaption>Fuego indirecto: todo el carbón a un lado, la carne cocina del lado vacío con la tapa cerrada.</figcaption>
+      </figure>
+    </div>
+    <div class="table-wrap">
+    <table>
+      <caption>Cómo armar cada zona</caption>
+      <thead><tr><th>Zona</th><th>Cómo se arma</th><th>Para qué sirve</th></tr></thead>
+      <tbody>
+        <tr><td><b>Fuego alto (directo)</b></td><td>Carbón apilado en dos o tres capas, parrilla baja (8–10 cm de la brasa).</td><td>Sellar: marcar la costra en 1–3 minutos por lado en bifes finos y entraña.</td></tr>
+        <tr><td><b>Fuego medio (directo)</b></td><td>Carbón en una sola capa pareja.</td><td>Terminar de cocinar piezas de grosor medio sin quemar el exterior.</td></tr>
+        <tr><td><b>Fuego indirecto</b></td><td>Todo el carbón concentrado a un lado o en los bordes; la carne va del lado sin brasa, con la tapa cerrada.</td><td>Cocinar piezas gruesas (tomahawk, pollo entero, costillas) de adentro hacia afuera sin quemar la superficie.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Una forma rápida de medir la intensidad sin termómetro: pon la palma de la mano a la altura donde irá la carne. Si aguantas 2 segundos, es fuego alto; 4–5 segundos, fuego medio; más de 7 segundos, fuego bajo/indirecto.</p>
+
+    <h2>1.4 Seguridad y prevención de incendios</h2>
+    <div class="warn">
+      <b>Reglas que no son opcionales:</b>
+      <ul>
+        <li>Usa la parrilla o el Kamado siempre al aire libre o en un espacio con ventilación real (terraza abierta, patio). El carbón libera monóxido de carbono: nunca lo uses dentro de un departamento cerrado, cochera techada sin ventilación o espacio similar.</li>
+        <li>Mantén la parrilla a al menos un metro de paredes, toldos, cortinas o cualquier material inflamable.</li>
+        <li>Ten cerca algo para sofocar un foco de fuego: un balde de arena, bicarbonato o un extintor tipo ABC. El agua puede hacer saltar grasa caliente, así que no es la primera opción sobre grasa encendida.</li>
+        <li>Nunca uses líquido encendedor sobre brasas ya calientes ni para "reavivar" el fuego: el riesgo de llamarada es real.</li>
+        <li>Deja enfriar el carbón usado al menos 24 horas antes de desecharlo, o apágalo con agua y revuelve bien antes de botarlo. La ceniza puede mantener calor por horas.</li>
+        <li>Supervisa siempre la parrilla encendida cuando hay niños o mascotas cerca.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CAPÍTULO 2 ======================= -->
+<section class="chapter">
+  <div class="page">
+    <div class="chapter-num">Capítulo 2</div>
+    <h1>¿Qué corte preparo en cada equipo?</h1>
+    <p class="lead">No todos los cortes se comportan igual en todos los equipos. Antes de comprar, revisa qué tienes disponible en casa y elige el corte que mejor se adapta — te vas a ahorrar frustraciones.</p>
+
+    <div class="table-wrap">
+    <table>
+      <caption>Guía rápida por equipo</caption>
+      <thead><tr><th>Equipo</th><th>Cortes recomendados</th><th>Limitación principal</th></tr></thead>
+      <tbody>
+        <tr><td><b>Parrilla tradicional</b></td><td>Picaña, bife ancho, bife angosto, entraña, asado de tira, tomahawk, cowboy steak, T-bone, panceta.</td><td>Exige control manual del fuego; piezas muy gruesas necesitan zona indirecta, no solo fuego directo.</td></tr>
+        <tr><td><b>Sartén de hierro / fundida</b></td><td>Bife ancho, bife angosto, entraña, medallones y porciones de picaña.</td><td>No reemplaza el sabor ahumado del carbón; piezas gruesas (tomahawk) no sellan ni cocinan parejo solo en sartén.</td></tr>
+        <tr><td><b>Horno doméstico</b></td><td>Tomahawk y cortes gruesos, picaña entera, costillas, preparaciones de cocción prolongada.</td><td>No da costra tipo brasa por sí solo: necesita un sellado previo o final en sartén/parrilla.</td></tr>
+        <tr><td><b>Kamado</b></td><td>Steaks, picaña entera, tomahawk, costillas, panceta, brisket.</td><td>Equipo versátil pero de mayor costo e inversión de tiempo en dominar su control de aire.</td></tr>
+        <tr><td><b>Caja china</b></td><td>Panceta, cerdo entero o en piezas grandes, pavo.</td><td>Pensada para piezas grandes a fuego parejo desde arriba; poco práctica para un solo bife.</td></tr>
+        <tr><td><b>Cilindro (ahumador vertical)</b></td><td>Costillas, panceta, cortes para ahumado lento.</td><td>Requiere más tiempo y manejo de temperatura constante; no es para cocción rápida.</td></tr>
+        <tr><td><b>Sin parrilla (depa/sin espacio exterior)</b></td><td>Bifes en sartén de hierro + terminado en horno; piezas gruesas 100% al horno con sellado final en sartén.</td><td>No vas a lograr el aroma a humo de brasa; se compensa con buena costra y condimentos.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>En detalle</h2>
+    <div class="equipo-grid">
+      <div class="equipo-card">
+        <h4>🔥 Parrilla tradicional</h4>
+        <p>El equipo más versátil para carnes a la parrilla. Con zonas de fuego alto, medio e indirecto (Capítulo 1) puedes cubrir casi toda la carta: desde una entraña de 3 minutos por lado hasta un tomahawk que necesita 40 minutos a fuego indirecto antes del sellado final.</p>
+        <div class="limite">Limitación: el resultado depende de tu manejo del fuego, no del equipo. Un tomahawk puesto directo sobre brasa fuerte se quema por fuera antes de cocinarse por dentro.</div>
+      </div>
+      <div class="equipo-card">
+        <h4>🍳 Sartén de hierro o fundida</h4>
+        <p>Ideal para piezas de grosor medio (2–4 cm): bife ancho, bife angosto, entraña, medallones de picaña. El hierro retiene mucho calor y da una costra pareja si la sartén está bien precalentada.</p>
+        <div class="limite">Limitación: para piezas muy gruesas (tomahawk, cowboy) la sartén sola sella bien el exterior pero no cocina el centro sin quemar la base; hay que terminarlas al horno.</div>
+      </div>
+      <div class="equipo-card">
+        <h4>🧯 Horno doméstico</h4>
+        <p>Tu mejor aliado para cortes gruesos y piezas enteras: picaña entera, tomahawk, costillas, asado de tira a cocción prolongada. Cocina parejo de adentro hacia afuera a temperatura controlada (160–180°C), y luego defines la costra con un sellado en sartén muy caliente o bajo el grill.</p>
+        <div class="limite">Limitación: sin sellado previo o final, el resultado queda cocido pero sin la costra característica de la parrilla.</div>
+      </div>
+      <div class="equipo-card">
+        <h4>🥚 Kamado</h4>
+        <p>Combina lo mejor de la parrilla y el horno: retiene calor y humedad por su forma cerrada de cerámica, permite cocción directa, indirecta y a baja temperatura prolongada (low & slow) en el mismo equipo. Muy usado para tomahawk, costillas, panceta y brisket.</p>
+        <div class="limite">Limitación: el control de las rejillas de aire tiene curva de aprendizaje; subestimar el calor residual de la cerámica es el error más común de quien recién empieza.</div>
+      </div>
+      <div class="equipo-card">
+        <h4>📦 Caja china</h4>
+        <p>Brasas sobre una tapa metálica que cubre una caja aislada: el calor baja parejo desde arriba. Funciona muy bien para panceta y piezas grandes de cerdo que necesitan cocción uniforme sin tener que voltearlas.</p>
+        <div class="limite">Limitación: no es el equipo para un bife individual; su fuerte son las piezas grandes para varios comensales.</div>
+      </div>
+      <div class="equipo-card">
+        <h4>🛢️ Cilindro / ahumador vertical</h4>
+        <p>Pensado para cocciones largas a baja temperatura con humo constante: costillas, panceta, piezas para ahumado. El resultado es una carne muy tierna con sabor ahumado profundo.</p>
+        <div class="limite">Limitación: requiere tiempo (horas) y vigilancia de temperatura; no sirve para una comida rápida entre semana.</div>
+      </div>
+      <div class="equipo-card">
+        <h4>🏢 Sin espacio exterior</h4>
+        <p>Si vives en un departamento sin terraza, puedes lograr muy buenos resultados con sartén de hierro + horno: sella la pieza en sartén bien caliente (humeando) y termina la cocción en el horno a temperatura media. Para piezas gruesas, es mejor empezar al horno y sellar al final.</p>
+        <div class="limite">Limitación real: no vas a replicar el aroma a humo de carbón. Se compensa con una costra bien marcada, buena sal y un chimichurri con carácter.</div>
+      </div>
+    </div>
+    <div class="warn">No todos los cortes funcionan igual en todos los equipos. Un brisket o unas costillas gruesas no son una preparación rápida en ningún equipo: necesitan cocción prolongada a baja temperatura, sea en Kamado, cilindro, caja china u horno. Intentar "apurarlas" a fuego alto reseca la carne por fuera sin ablandar el colágeno por dentro.</div>
+  </div>
+</section>
+
+<!-- ======================= CAPÍTULO 3 ======================= -->
+<section class="chapter">
+  <div class="page">
+    <div class="chapter-num">Capítulo 3</div>
+    <h1>Fichas técnicas de los cortes</h1>
+    <p class="lead">Guarda este capítulo a mano: cada ficha es una referencia rápida de qué comprar, cómo prepararlo y cómo saber cuándo retirarlo.</p>
+
+    <div class="tip"><b>Antes de empezar, tres aclaraciones que evitan confusiones comunes:</b>
+      <ul>
+        <li><b>Tomahawk vs. cowboy vs. ribeye:</b> los tres vienen del mismo músculo (el bife ancho o "ribeye"). El <b>ribeye</b> es la versión sin hueso. El <b>cowboy steak</b> es un corte grueso con un trozo corto de hueso. El <b>tomahawk</b> es el mismo corte con el hueso largo limpiado ("frenchado"), lo que lo hace más vistoso pero no cambia el sabor de la carne en sí.</li>
+        <li><b>Picaña y otros cortes del cuadril:</b> la picaña es una pieza específica con una capa de grasa característica en la superficie; no es sinónimo de "cuadril" en general, que incluye otras piezas con menos grasa de cobertura y distinta textura.</li>
+        <li><b>Los nombres cambian según el proveedor:</b> un mismo músculo puede tener nombre distinto entre un carnicero y otro, o entre Perú, Argentina y Estados Unidos. Cuando compres, confirma el corte por su descripción física (ubicación, grasa, hueso) y no solo por el nombre comercial.</li>
+      </ul>
+    </div>
+
+    <!-- PICAÑA -->
+    <div class="ficha">
+      <div class="ficha-head"><h3>Picaña</h3></div>
+      <div class="tag-row"><span class="tag media">Dificultad media</span><span class="tag">Parrilla · Kamado · Horno</span><span class="tag">Reunión familiar</span></div>
+      <ul class="equiv-list">
+        <li><b>Brasil:</b> Picanha (origen del nombre)</li><li><b>Argentina/Uruguay:</b> Tapa de cuadril, colita de cuadril</li><li><b>Inglés:</b> Rump cap, culotte</li>
+      </ul>
+      <div class="grid-2">
+        <div class="field"><h4>Características</h4><p>Pieza triangular del cuadril con una capa gruesa de grasa de cobertura en un solo lado. Carne magra y de fibra firme por debajo de esa grasa, que es la que le da jugosidad y sabor al cocinarse.</p></div>
+        <div class="field"><h4>Mejor equipo y método</h4><p>Parrilla (entera, en forma de "C", grasa hacia el fuego) u horno/Kamado para pieza entera; en sartén funciona en porciones individuales.</p></div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><h4>Grosor recomendado</h4><p>Entera (1–1.4 kg aprox.) o en porciones de 3–4 cm de grosor si se corta antes de cocinar.</p></div>
+        <div class="field"><h4>Preparación y sal</h4><p>Hacer cortes superficiales en cruz sobre la grasa (sin llegar a la carne) para que se derrita pareja. Salar con sal gruesa justo antes de ponerla al fuego.</p></div>
+      </div>
+      <div class="field"><h4>Fuego</h4><p>Empieza con la grasa hacia el fuego a temperatura media para que se derrita y dore sin quemarse (8–10 min). Luego da vuelta y termina a fuego medio-alto del lado de la carne.</p></div>
+      <div class="field"><h4>Procedimiento</h4><ol class="steps">
+        <li>Deja la pieza entera o divide en 3–4 porciones gruesas siguiendo la curva natural de la grasa.</li>
+        <li>Coloca con la grasa hacia abajo, fuego medio, 10–12 minutos sin mover.</li>
+        <li>Voltea y sella el lado de la carne a fuego medio-alto, 4–6 minutos.</li>
+        <li>Si es pieza entera, pásala a zona indirecta o al horno a 180°C hasta alcanzar el punto deseado.</li>
+        <li>Retira, cubre con papel aluminio y deja reposar.</li>
+      </ol></div>
+      <div class="grid-2">
+        <div class="field"><h4>Punto de cocción</h4><p>Usa un termómetro de aguja: 55–58°C para término medio (ver también Capítulo 5 sobre temperaturas seguras).</p></div>
+        <div class="field"><h4>Tiempo orientativo</h4><p>25–35 minutos en total para la pieza entera; varía según grosor exacto y temperatura del fuego.</p></div>
+      </div>
+      <div class="field"><h4>Reposo y corte</h4><p>Reposa 8–10 minutos tapada. Corta en láminas de 1.5 cm perpendiculares a la fibra, nunca a favor.</p></div>
+      <div class="warn"><b>Error común:</b> cocinarla con la grasa hacia arriba desde el inicio — la grasa no se derrite ni dora, y la pieza pierde jugosidad y sabor.</div>
+    </div>
+
+    <!-- BIFE ANCHO -->
+    <div class="ficha">
+      <div class="ficha-head"><h3>Bife ancho (ribeye)</h3></div>
+      <div class="tag-row"><span class="tag facil">Dificultad fácil</span><span class="tag">Parrilla · Sartén · Kamado</span><span class="tag">Cualquier ocasión</span></div>
+      <ul class="equiv-list">
+        <li><b>Argentina:</b> Ojo de bife</li><li><b>Inglés:</b> Ribeye</li><li><b>Francia:</b> Entrecôte</li>
+      </ul>
+      <div class="grid-2">
+        <div class="field"><h4>Características</h4><p>Corte con alto marmoleo (grasa infiltrada entre las fibras), lo que lo hace jugoso y sabroso incluso sin marinar. Textura tierna, sin hueso en su versión estándar.</p></div>
+        <div class="field"><h4>Mejor equipo</h4><p>Parrilla, sartén de hierro o Kamado. Es de los cortes más agradecidos para quien recién empieza.</p></div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><h4>Grosor recomendado</h4><p>2.5–3.5 cm. Menos de 2 cm se cocina demasiado rápido y es fácil pasarse de punto.</p></div>
+        <div class="field"><h4>Preparación y sal</h4><p>Saca del refrigerador 20–30 minutos antes para que no entre frío a la parrilla. Sal gruesa 10–15 minutos antes de cocinar.</p></div>
+      </div>
+      <div class="field"><h4>Fuego</h4><p>Fuego alto directo para sellar (2–3 min por lado), luego fuego medio para terminar el interior sin quemar la costra.</p></div>
+      <div class="field"><h4>Cómo comprobar el punto</h4><p>Termómetro de aguja insertado de costado hasta el centro. No lo cortes para "espiar": se escapan los jugos.</p></div>
+      <div class="grid-2">
+        <div class="field"><h4>Tiempo orientativo</h4><p>8–10 minutos totales para 3 cm de grosor a término medio; ajusta según grosor real y temperatura del fuego.</p></div>
+        <div class="field"><h4>Reposo</h4><p>4–5 minutos antes de cortar, para que los jugos se redistribuyan.</p></div>
+      </div>
+      <div class="warn"><b>Error común:</b> moverlo o voltearlo constantemente. Dale tiempo de contacto fijo con el fuego para que forme costra antes de voltear.</div>
+    </div>
+
+    <!-- BIFE ANGOSTO -->
+    <div class="ficha">
+      <div class="ficha-head"><h3>Bife angosto</h3></div>
+      <div class="tag-row"><span class="tag facil">Dificultad fácil</span><span class="tag">Parrilla · Sartén</span><span class="tag">Entre semana</span></div>
+      <ul class="equiv-list">
+        <li><b>Inglés:</b> New York strip, club steak</li><li><b>Argentina:</b> Bife de chorizo (con pequeñas variaciones de corte)</li>
+      </ul>
+      <div class="grid-2">
+        <div class="field"><h4>Características</h4><p>Menos marmoleo que el bife ancho, con una franja de grasa en el borde. Textura firme y sabor pronunciado.</p></div>
+        <div class="field"><h4>Mejor equipo</h4><p>Parrilla o sartén de hierro bien caliente.</p></div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><h4>Grosor recomendado</h4><p>2–3 cm.</p></div>
+        <div class="field"><h4>Preparación</h4><p>Sal gruesa antes de cocinar; opcional, pimienta recién molida después de sellar (se quema con fuego alto).</p></div>
+      </div>
+      <div class="field"><h4>Procedimiento</h4><p>Sella 2–3 minutos por lado a fuego alto. Para la franja de grasa del borde, sostén el bife de canto con pinzas unos 30–40 segundos para que también dore.</p></div>
+      <div class="grid-2">
+        <div class="field"><h4>Tiempo orientativo</h4><p>6–8 minutos totales, según grosor.</p></div>
+        <div class="field"><h4>Reposo y corte</h4><p>4 minutos de reposo; corta contra la fibra en láminas de 1 cm.</p></div>
+      </div>
+    </div>
+
+    <!-- ENTRAÑA -->
+    <div class="ficha">
+      <div class="ficha-head"><h3>Entraña</h3></div>
+      <div class="tag-row"><span class="tag facil">Dificultad fácil</span><span class="tag">Parrilla · Sartén</span><span class="tag">Cocción rápida</span></div>
+      <ul class="equiv-list"><li><b>Inglés:</b> Skirt steak</li></ul>
+      <div class="grid-2">
+        <div class="field"><h4>Características</h4><p>Corte delgado y fibroso, de sabor intenso. Sin grasa infiltrada; la jugosidad depende casi por completo de no pasarte de cocción.</p></div>
+        <div class="field"><h4>Mejor equipo</h4><p>Parrilla a fuego alto o sartén muy caliente. No es corte para horno ni cocción lenta.</p></div>
+      </div>
+      <div class="field"><h4>Preparación</h4><p>Retira la membrana translúcida de un lado si el carnicero no lo hizo. Sal gruesa justo antes de cocinar.</p></div>
+      <div class="field"><h4>Procedimiento</h4><p>Fuego alto directo, 2–3 minutos por lado según grosor. Por su fibra abierta, pasa de jugosa a seca en poco tiempo: no te alejes de la parrilla.</p></div>
+      <div class="grid-2">
+        <div class="field"><h4>Tiempo orientativo</h4><p>4–6 minutos totales.</p></div>
+        <div class="field"><h4>Reposo y corte</h4><p>3 minutos de reposo. Corta en tiras finas, siempre contra la fibra (es el corte donde más se nota si no lo haces bien).</p></div>
+      </div>
+      <div class="warn"><b>Error común:</b> cocinarla como si fuera un bife grueso. Por su grosor delgado, se pasa de punto muy rápido.</div>
+    </div>
+
+    <!-- ASADO DE TIRA -->
+    <div class="ficha">
+      <div class="ficha-head"><h3>Asado de tira</h3></div>
+      <div class="tag-row"><span class="tag media">Dificultad media</span><span class="tag">Parrilla · Kamado</span><span class="tag">Parrillada grupal</span></div>
+      <ul class="equiv-list"><li><b>Inglés:</b> Flanken-cut short ribs (corte transversal con hueso)</li></ul>
+      <div class="grid-2">
+        <div class="field"><h4>Características</h4><p>Costillas cortadas transversalmente, con varios discos de hueso visibles en cada tira. Buena proporción de grasa y colágeno.</p></div>
+        <div class="field"><h4>Mejor equipo y fuego</h4><p>Parrilla o Kamado, fuego medio con tapa si es posible, para que el colágeno se ablande sin quemar el exterior.</p></div>
+      </div>
+      <div class="field"><h4>Procedimiento</h4><p>Sal gruesa con anticipación (30 min). Cocina a fuego medio, volteando cada 4–5 minutos, hasta que esté bien dorada por fuera y tierna al pinchar entre los huesos.</p></div>
+      <div class="grid-2">
+        <div class="field"><h4>Tiempo orientativo</h4><p>20–30 minutos, más tiempo que un bife por su contenido de colágeno y hueso.</p></div>
+        <div class="field"><h4>Cómo comprobar el punto</h4><p>Un tenedor o la punta de una pinza debe entrar con poca resistencia entre la carne y el hueso.</p></div>
+      </div>
+    </div>
+
+    <!-- TOMAHAWK -->
+    <div class="ficha">
+      <div class="ficha-head"><h3>Tomahawk</h3></div>
+      <div class="tag-row"><span class="tag dificil">Dificultad alta</span><span class="tag">Parrilla · Horno · Kamado</span><span class="tag">Ocasión especial</span></div>
+      <p>Mismo músculo que el bife ancho, con el hueso largo limpiado ("frenchado") que le da su forma característica de hacha.</p>
+      <div class="grid-2">
+        <div class="field"><h4>Grosor</h4><p>5–6 cm (pieza de 1–1.3 kg sin contar el hueso).</p></div>
+        <div class="field"><h4>Mejor método</h4><p>Cocción indirecta primero, sellado directo al final — nunca al revés en una pieza así de gruesa.</p></div>
+      </div>
+      <div class="field"><h4>Procedimiento (indirecta + sellado final)</h4><ol class="steps">
+        <li>Sal gruesa 40 minutos antes; deja atemperar fuera del refrigerador.</li>
+        <li>Coloca en zona indirecta (o al horno a 140–150°C) hasta que el centro llegue 5–6°C por debajo del punto final deseado.</li>
+        <li>Pasa a fuego alto directo (o sartén muy caliente) 60–90 segundos por lado para formar costra.</li>
+        <li>Retira cuando el termómetro marque el punto objetivo.</li>
+      </ol></div>
+      <div class="grid-2">
+        <div class="field"><h4>Tiempo orientativo</h4><p>45–60 minutos en total (varía mucho según grosor real y temperatura del horno/parrilla).</p></div>
+        <div class="field"><h4>Reposo</h4><p>10–12 minutos, tapado, antes de cortar: es una pieza grande y necesita más tiempo que un bife normal.</p></div>
+      </div>
+      <div class="warn"><b>Error común:</b> ponerlo directo a fuego alto desde el inicio. El exterior se quema antes de que el centro llegue a temperatura — por eso siempre se empieza indirecto.</div>
+    </div>
+
+    <!-- COWBOY STEAK -->
+    <div class="ficha">
+      <div class="ficha-head"><h3>Cowboy steak</h3></div>
+      <div class="tag-row"><span class="tag dificil">Dificultad media-alta</span><span class="tag">Parrilla · Horno · Kamado</span></div>
+      <p>El mismo corte que el tomahawk pero con el hueso cortado corto, sin frenchar. Misma técnica: indirecta y sellado final, ajustando tiempos a su grosor específico (suele ser 4–5 cm).</p>
+      <div class="field"><h4>Diferencia práctica con el tomahawk</h4><p>Cocina de forma casi idéntica; la diferencia es solo visual y de cuánto hueso queda expuesto. No esperes diferencias de sabor entre ambos.</p></div>
+    </div>
+
+    <!-- T-BONE -->
+    <div class="ficha">
+      <div class="ficha-head"><h3>T-bone</h3></div>
+      <div class="tag-row"><span class="tag media">Dificultad media</span><span class="tag">Parrilla · Horno</span></div>
+      <div class="field"><h4>Características</h4><p>Combina dos cortes separados por un hueso en forma de "T": de un lado, bife angosto; del otro, una porción de lomo (filete), que es más magro y se cocina más rápido.</p></div>
+      <div class="field"><h4>Procedimiento</h4><p>Por tener dos texturas en una sola pieza, orienta el lado del lomo (más pequeño) un poco más alejado del punto más caliente del fuego, para que no se pase de cocción mientras el lado del bife angosto termina.</p></div>
+      <div class="tip">No confundir con el <b>porterhouse</b>: es un corte similar pero con una porción de lomo notablemente más grande. Si tu proveedor usa ambos nombres, pregunta por el tamaño del lado del lomo.</div>
+    </div>
+
+    <!-- PANCETA -->
+    <div class="ficha">
+      <div class="ficha-head"><h3>Panceta</h3></div>
+      <div class="tag-row"><span class="tag media">Dificultad media</span><span class="tag">Parrilla · Horno · Kamado · Caja china</span></div>
+      <ul class="equiv-list"><li><b>Inglés:</b> Pork belly</li><li><b>Nota:</b> no confundir con el tocino/bacon, que es panceta curada y ahumada en láminas finas.</li></ul>
+      <div class="field"><h4>Características</h4><p>Corte de cerdo con capas alternadas de carne y grasa, y piel en un lado. Pieza ideal para lograr una "piel crocante tipo galleta" (ver receta en Capítulo 4).</p></div>
+      <div class="field"><h4>Mejor método</h4><p>Cocción indirecta/lenta primero para ablandar la grasa y el colágeno, calor fuerte al final solo sobre la piel para que explote y quede crujiente.</p></div>
+      <div class="grid-2">
+        <div class="field"><h4>Tiempo orientativo</h4><p>1.5–2.5 horas a baja temperatura, según grosor de la pieza.</p></div>
+        <div class="field"><h4>Cómo comprobar el punto</h4><p>Un palillo debe entrar en la carne (no en la piel) con poca resistencia.</p></div>
+      </div>
+    </div>
+
+    <!-- COSTILLAS -->
+    <div class="ficha">
+      <div class="ficha-head"><h3>Costillas de cerdo</h3></div>
+      <div class="tag-row"><span class="tag dificil">Dificultad media-alta</span><span class="tag">Kamado · Cilindro · Horno · Caja china</span></div>
+      <ul class="equiv-list"><li><b>Baby back:</b> costillar más pequeño y magro, cerca del lomo.</li><li><b>Spare ribs:</b> costillar más grande, con más grasa y sabor.</li></ul>
+      <div class="field"><h4>Mejor método</h4><p>Cocción lenta e indirecta (90–120°C) durante varias horas. No es una preparación rápida: el objetivo es ablandar el colágeno entre los huesos.</p></div>
+      <div class="grid-2">
+        <div class="field"><h4>Tiempo orientativo</h4><p>3–5 horas según tipo de costillar y temperatura, mucho más que cualquier bife.</p></div>
+        <div class="field"><h4>Cómo comprobar el punto</h4><p>La carne se retrae dejando ver un poco el hueso, y al doblar el costillar con una pinza se empieza a "cuartear" la superficie.</p></div>
+      </div>
+      <div class="warn">Nunca trates las costillas como un corte rápido: a fuego alto directo se queman por fuera mucho antes de ablandarse por dentro.</div>
+    </div>
+
+    <!-- BRISKET -->
+    <div class="ficha">
+      <div class="ficha-head"><h3>Brisket (pecho)</h3></div>
+      <div class="tag-row"><span class="tag dificil">Dificultad alta</span><span class="tag">Kamado · Cilindro</span><span class="tag">Cocción prolongada</span></div>
+      <div class="field"><h4>Características</h4><p>Corte grande y fibroso del pecho de res, con una capa de grasa de cobertura. Requiere cocción muy lenta para romper su tejido conectivo.</p></div>
+      <div class="field"><h4>Mejor método</h4><p>Baja temperatura constante (110–130°C) durante varias horas, con control de humo y humedad. No es apto para parrilla simple ni para horno doméstico sin control fino de temperatura.</p></div>
+      <div class="grid-2">
+        <div class="field"><h4>Tiempo orientativo</h4><p>6–10 horas o más, dependiendo del tamaño de la pieza — nunca una preparación de una tarde corta.</p></div>
+        <div class="field"><h4>Cómo comprobar el punto</h4><p>Un termómetro debe entrar en el centro "como en mantequilla", con muy poca resistencia, típicamente cerca de 93–96°C de temperatura interna.</p></div>
+      </div>
+      <div class="warn">No presentes el brisket como receta rápida: es, junto con las costillas gruesas, de las preparaciones que más tiempo exige en este libro.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CAPÍTULO 4 ======================= -->
+<section class="chapter">
+  <div class="page">
+    <div class="chapter-num">Capítulo 4</div>
+    <h1>Técnicas y recetas imprescindibles</h1>
+    <p class="lead">Con el corte y el equipo resueltos, esto es lo que convierte una parrillada correcta en una memorable.</p>
+
+    <h2>4.1 Sellar y terminar a temperatura moderada</h2>
+    <p>Sellar significa generar una costra dorada por reacción de Maillard (la misma que dora el pan) a fuego alto, y luego bajar la intensidad para que el interior llegue a punto sin quemar el exterior.</p>
+    <ol class="steps">
+      <li>Seca la superficie de la carne con papel absorbente — la humedad en la superficie evita que selle bien.</li>
+      <li>Fuego alto directo: 2–3 minutos por lado, sin mover la pieza, hasta formar costra pareja.</li>
+      <li>Baja a fuego medio (o mueve a zona media) y termina de cocinar hasta el punto deseado, verificando con termómetro.</li>
+    </ol>
+
+    <h2>4.2 Cocción indirecta + sellado final (piezas gruesas)</h2>
+    <p>Para piezas de más de 4 cm de grosor (tomahawk, picaña entera, piezas de cerdo grandes), el orden se invierte respecto a un bife fino: primero cocción suave e indirecta hasta casi el punto final, y recién al final un sellado corto e intenso.</p>
+    <ol class="steps">
+      <li>Coloca la pieza en zona indirecta o en el horno a 140–160°C.</li>
+      <li>Cocina hasta que el centro esté 5–6°C por debajo de tu punto objetivo (usa termómetro de aguja).</li>
+      <li>Sella 60–90 segundos por lado a fuego alto directo o en sartén muy caliente.</li>
+      <li>Retira y deja reposar antes de cortar.</li>
+    </ol>
+    <div class="tip">Esta técnica evita el problema más común con piezas gruesas: superficie quemada con el centro aún crudo.</div>
+
+    <h2>4.3 Panceta con piel crocante tipo galleta</h2>
+    <div class="receta">
+      <div class="receta-meta">
+        <span><b>Porciones</b>6–8</span><span><b>Tiempo</b>2–2.5 h</span><span><b>Equipo</b>Horno o Kamado + bandeja</span>
+      </div>
+      <h4>Ingredientes</h4>
+      <ul class="ingredientes">
+        <li>1.5 kg de panceta de cerdo con piel</li>
+        <li>2 cdas de sal gruesa</li>
+        <li>1 cda de vinagre blanco</li>
+        <li>1 cdta de bicarbonato de sodio</li>
+        <li>Pimienta y ajo en polvo al gusto</li>
+      </ul>
+      <h4>Procedimiento</h4>
+      <ol class="steps">
+        <li>Seca muy bien la piel con papel absorbente; mientras más seca, más crocante quedará.</li>
+        <li>Haz cortes superficiales en la piel formando un rombo, sin llegar a la carne.</li>
+        <li>Frota la piel con vinagre y espolvorea con bicarbonato (ayuda a secar y favorece el crocante); sazona la carne por debajo con sal, pimienta y ajo.</li>
+        <li>Deja reposar destapada en el refrigerador 2–4 horas (o toda la noche) para que la piel se seque más.</li>
+        <li>Cocina a 150°C durante 1.5 horas, con la piel hacia arriba.</li>
+        <li>Sube la temperatura a 220–230°C (o usa el grill) los últimos 15–20 minutos, vigilando de cerca, hasta que la piel "explote" y quede dorada y crocante.</li>
+      </ol>
+      <div class="warn">La piel pasa de crocante a quemada en minutos una vez que sube la temperatura final: no te alejes del horno en esa etapa.</div>
+    </div>
+
+    <h2>4.4 Papitas cóctel a las finas hierbas</h2>
+    <div class="receta">
+      <div class="receta-meta">
+        <span><b>Porciones</b>4–6</span><span><b>Tiempo</b>35 min</span><span><b>Equipo</b>Olla + sartén u horno</span>
+      </div>
+      <h4>Ingredientes</h4>
+      <ul class="ingredientes">
+        <li>800 g de papitas cóctel (amarillas pequeñas)</li>
+        <li>3 cdas de aceite de oliva</li>
+        <li>2 dientes de ajo picados</li>
+        <li>1 cda de romero fresco picado</li>
+        <li>1 cda de tomillo fresco picado</li>
+        <li>Sal y pimienta al gusto</li>
+      </ul>
+      <h4>Procedimiento</h4>
+      <ol class="steps">
+        <li>Lava bien las papitas (consérvalas con cáscara) y hiérvelas en agua con sal hasta que estén apenas tiernas al pinchar (10–12 min). No las cocines de más: terminan de cocinarse al dorar.</li>
+        <li>Escurre y seca bien.</li>
+        <li>Calienta el aceite en sartén a fuego medio-alto (o usa el horno a 200°C) y dora las papitas por todos los lados, 10–12 minutos.</li>
+        <li>Baja el fuego, añade ajo, romero y tomillo, y saltea 1–2 minutos más hasta que el ajo esté fragante sin quemarse.</li>
+        <li>Sazona con sal y pimienta al final y sirve caliente.</li>
+      </ol>
+    </div>
+
+    <h2>4.5 Chimichurri</h2>
+    <div class="receta">
+      <div class="receta-meta">
+        <span><b>Rinde</b>~250 ml</span><span><b>Tiempo</b>10 min + reposo</span>
+      </div>
+      <h4>Ingredientes</h4>
+      <ul class="ingredientes">
+        <li>1 taza de perejil fresco picado fino</li>
+        <li>3 dientes de ajo picados fino</li>
+        <li>1 cdta de orégano seco</li>
+        <li>1/2 cdta de ají seco molido (opcional, al gusto)</li>
+        <li>3/4 taza de aceite de oliva o vegetal</li>
+        <li>1/4 taza de vinagre de vino tinto</li>
+        <li>Sal y pimienta al gusto</li>
+      </ul>
+      <h4>Procedimiento</h4>
+      <ol class="steps">
+        <li>Mezcla todos los ingredientes secos en un bowl.</li>
+        <li>Incorpora el aceite y el vinagre, mezclando bien.</li>
+        <li>Deja reposar al menos 30 minutos a temperatura ambiente antes de servir para que los sabores se integren.</li>
+      </ol>
+      <div class="tip">Se conserva varios días en el refrigerador; mejora al día siguiente.</div>
+    </div>
+
+    <h2>4.6 Salsa criolla peruana</h2>
+    <div class="receta">
+      <div class="receta-meta">
+        <span><b>Rinde</b>4 porciones</span><span><b>Tiempo</b>15 min + reposo</span>
+      </div>
+      <h4>Ingredientes</h4>
+      <ul class="ingredientes">
+        <li>1 cebolla roja grande, en pluma fina</li>
+        <li>1 ají limo (o al gusto), en tiras finas sin venas ni pepas</li>
+        <li>Jugo de 2 limones</li>
+        <li>2 cdas de culantro (cilantro) picado</li>
+        <li>Sal y pimienta al gusto</li>
+      </ul>
+      <h4>Procedimiento</h4>
+      <ol class="steps">
+        <li>Lava la cebolla en pluma bajo agua fría para suavizar su sabor; escurre bien.</li>
+        <li>Mezcla la cebolla con el ají limo, el culantro, sal y pimienta.</li>
+        <li>Añade el jugo de limón justo antes de servir (si se agrega con mucha anticipación, la cebolla pierde textura).</li>
+      </ol>
+    </div>
+
+    <h2>4.7 Cómo cortar contra la fibra</h2>
+    <p>La fibra muscular corre en una dirección visible a simple vista, como líneas paralelas sobre la superficie de la carne. Cortar "contra la fibra" significa pasar el cuchillo perpendicular a esas líneas, acortando las fibras en vez de dejarlas largas.</p>
+    <ol class="steps">
+      <li>Observa la pieza antes de cortar e identifica la dirección de las líneas musculares.</li>
+      <li>Gira la pieza si es necesario para que el cuchillo quede perpendicular a esas líneas.</li>
+      <li>Corta en láminas de 1–1.5 cm con movimientos firmes y continuos, sin serruchar.</li>
+    </ol>
+    <div class="tip">Por qué importa: cortar a favor de la fibra deja hebras largas que se sienten duras al masticar, incluso en un corte bien cocinado. Es el detalle que más diferencia una carne "dura" de una "tierna" servida de la misma pieza.</div>
+
+    <h2>4.8 Organizar una parrillada completa por tiempos</h2>
+    <p>La diferencia entre una parrillada relajada y una carrera contra el reloj está en el orden. Esta es una línea de tiempo orientativa para una parrillada de 4–6 personas con varios cortes:</p>
+    <div class="table-wrap">
+    <table>
+      <caption>Orden sugerido (hora de llegada de invitados = 0 min)</caption>
+      <thead><tr><th>Momento</th><th>Qué hacer</th></tr></thead>
+      <tbody>
+        <tr><td>-60 min</td><td>Enciende el carbón; saca las carnes del refrigerador para que atemperen.</td></tr>
+        <tr><td>-40 min</td><td>Arma zonas de fuego; si hay pieza gruesa (tomahawk, costillas), ponla a cocción indirecta.</td></tr>
+        <tr><td>-20 min</td><td>Prepara chimichurri y salsa criolla; hierve las papitas cóctel.</td></tr>
+        <tr><td>0 min</td><td>Llegada de invitados; sirve algún anticucho o piqueo rápido como entrada mientras el fuego sigue trabajando.</td></tr>
+        <tr><td>+10 min</td><td>Saltea las papitas cóctel con hierbas; mantenlas calientes.</td></tr>
+        <tr><td>+20 min</td><td>Cocina los cortes rápidos (entraña, bifes) a fuego alto, de último, para servirlos recién hechos.</td></tr>
+        <tr><td>+30 min</td><td>Sella y retira la pieza gruesa; déjala reposar mientras terminas los bifes.</td></tr>
+        <tr><td>+35 min</td><td>Corta contra la fibra y sirve todo junto, caliente.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>4.9 Maridaje: vino tinto y alternativas sin alcohol</h2>
+    <div class="table-wrap">
+    <table>
+      <caption>Guía general de maridaje</caption>
+      <thead><tr><th>Corte</th><th>Estilo de vino tinto</th><th>Alternativa sin alcohol</th></tr></thead>
+      <tbody>
+        <tr><td>Picaña, bife ancho (con grasa)</td><td>Tinto de cuerpo medio-alto, con buena acidez que corte la grasa (ej. tempranillo, malbec)</td><td>Chicha morada bien especiada, o un té negro frío con un toque cítrico</td></tr>
+        <tr><td>Bife angosto, T-bone</td><td>Tinto estructurado, taninos firmes (ej. cabernet sauvignon)</td><td>Jugo de uva tinta sin azúcar añadida, servido fresco</td></tr>
+        <tr><td>Entraña, asado de tira</td><td>Tinto joven y frutado, de fácil tomar (ej. malbec joven)</td><td>Limonada con hierbabuena, para refrescar el paladar entre bocado y bocado</td></tr>
+        <tr><td>Panceta, costillas de cerdo</td><td>Tinto ligero y afrutado, o incluso uno con un punto de dulzor</td><td>Kombucha o refresco de maracuyá, por su acidez que contrasta con la grasa</td></tr>
+        <tr><td>Brisket / cocciones ahumadas</td><td>Tinto con notas especiadas y cuerpo (ej. syrah)</td><td>Café frío sin azúcar o una soda de cola artesanal, por el contraste con el ahumado</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Como regla general: a más grasa en el corte, el vino (o la bebida) necesita más acidez o cuerpo para no quedar "aplastado" por el sabor de la carne. Estas son guías de punto de partida, no reglas absolutas — el mejor maridaje es el que a ti y tus invitados les gusta tomar.</p>
+  </div>
+</section>
+
+<!-- ======================= CAPÍTULO 5 ======================= -->
+<section class="chapter">
+  <div class="page">
+    <div class="chapter-num">Capítulo 5</div>
+    <h1>Seguridad alimentaria</h1>
+    <p class="lead">El sabor importa, pero la seguridad no es negociable. Esta sección distingue claramente entre el punto que prefieres comer y la temperatura mínima recomendada para evitar riesgos.</p>
+
+    <h2>5.1 Termómetro: tu herramienta más confiable</h2>
+    <p>Ni el color ni el tiempo de cocción son indicadores exactos del punto interno de una carne — dependen del grosor real de la pieza, de la temperatura inicial y del equipo usado. Un termómetro de lectura instantánea (de aguja) es la única forma confiable de saber qué está pasando dentro de la pieza.</p>
+    <ul>
+      <li>Inserta la aguja en la parte más gruesa de la pieza, evitando tocar hueso o grasa gruesa (dan lecturas falsas).</li>
+      <li>En piezas delgadas (bifes, entraña), inserta de costado para alcanzar el centro real.</li>
+      <li>Retira la carne del fuego unos grados antes del objetivo: la temperatura sigue subiendo unos minutos por el calor residual ("carryover").</li>
+    </ul>
+
+    <h2>5.2 Temperatura segura vs. punto gastronómico preferido</h2>
+    <p>Son dos cosas distintas y conviene no confundirlas. La <b>temperatura mínima segura</b> es la recomendación oficial para reducir el riesgo de enfermedades transmitidas por alimentos. El <b>punto gastronómico preferido</b> es una elección personal de textura y jugosidad, especialmente en cortes enteros (no molidos) de buena procedencia.</p>
+    <div class="table-wrap">
+    <table>
+      <caption>Temperaturas internas mínimas recomendadas (USDA FSIS)</caption>
+      <thead><tr><th>Producto</th><th>Temperatura mínima segura</th><th>Nota</th></tr></thead>
+      <tbody>
+        <tr><td>Carne molida (res, cerdo, cordero, ternera)</td><td>71°C</td><td>Sin tiempo de reposo adicional requerido; cocinar hasta ese punto en todo el volumen.</td></tr>
+        <tr><td>Cortes enteros de res, cerdo, cordero o ternera (bifes, asados, chuletas)</td><td>63°C</td><td>Con reposo mínimo de 3 minutos después de retirar del fuego.</td></tr>
+        <tr><td>Pollo y otras aves (entero, en piezas o molido)</td><td>74°C</td><td>Aplica a toda ave, sin importar el corte.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="tip">La recomendación de 63°C para cortes enteros existe porque, en una pieza intacta, los microorganismos se concentran en la superficie — y el sellado a fuego alto ya actúa sobre esa superficie. Por eso muchos parrilleros experimentados cocinan bifes de buena procedencia a un término medio-rojo (55–58°C), por debajo de la recomendación oficial, como elección de sabor y textura. Es una decisión informada que depende de la calidad y trazabilidad de la carne — no es lo mismo para carne molida, donde cualquier bacteria de superficie queda distribuida en todo el volumen al picar la carne, por lo que ahí sí se debe llegar siempre a 71°C sin excepción.</div>
+
+    <h2>5.3 Manipulación y conservación de carne cruda</h2>
+    <ul>
+      <li>Refrigera la carne a 4°C o menos, y congélala a -18°C si no la vas a usar en los próximos días.</li>
+      <li>Descongela en el refrigerador, no a temperatura ambiente sobre la mesa — el exterior entra en zona de riesgo mientras el centro sigue congelado.</li>
+      <li>Usa tablas y utensilios distintos para carne cruda y para alimentos listos para comer (verduras, pan).</li>
+      <li>No enjuagues la carne cruda bajo el chorro de agua: no elimina bacterias y sí puede salpicarlas sobre otras superficies de la cocina.</li>
+      <li>Marina siempre en el refrigerador, nunca a temperatura ambiente sobre la mesa o el mesón.</li>
+      <li>Si vas a usar parte de una marinada como salsa para servir, resérvala aparte antes de sumergir la carne cruda, o hiérvela varios minutos antes de usarla.</li>
+      <li>Lávate las manos con agua y jabón después de manipular carne cruda, antes de tocar cualquier otro ingrediente.</li>
+    </ul>
+
+    <h2>5.4 Prevención de incendios (recordatorio)</h2>
+    <p>Repasa el apartado 1.4: ventilación adecuada, distancia de materiales inflamables, elemento para sofocar fuego a la mano, y nunca usar la parrilla de carbón en espacios cerrados.</p>
+  </div>
+</section>
+
+<!-- ======================= REFERENCIAS ======================= -->
+<section class="chapter">
+  <div class="page">
+    <div class="chapter-num">Referencias</div>
+    <h1>Fuentes consultadas</h1>
+    <p>Las temperaturas de seguridad alimentaria citadas en el Capítulo 5 siguen los lineamientos públicos del Servicio de Inocuidad e Inspección de los Alimentos de Estados Unidos (USDA FSIS), ampliamente usados como referencia técnica en la industria cárnica. Verifica siempre la versión vigente en la fuente oficial antes de publicar o imprimir, ya que estos lineamientos pueden actualizarse.</p>
+    <ul class="refs">
+      <li><b>USDA Food Safety and Inspection Service (FSIS)</b> — Tabla de temperaturas internas mínimas seguras. <a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" target="_blank" rel="noopener">fsis.usda.gov — Safe Minimum Internal Temperature Chart</a></li>
+      <li><b>USDA FSIS</b> — Guía general de manipulación segura de carnes y aves. <a href="https://www.fsis.usda.gov/food-safety" target="_blank" rel="noopener">fsis.usda.gov/food-safety</a></li>
+    </ul>
+    <div class="warn">Nota de transparencia editorial: en esta edición no fue posible verificar en vivo la disponibilidad de los enlaces anteriores debido a restricciones de red del entorno de edición. Antes de publicar el ebook, confirma manualmente que ambos enlaces cargan correctamente y que el contenido citado (temperaturas de 63°C para cortes enteros, 71°C para carne molida y 74°C para aves) sigue vigente en la fuente oficial.</div>
+    <p>El resto del contenido técnico (manejo de fuego, técnicas de cocción, fichas de cortes y recetas) se basa en prácticas de parrilla y carnicería de uso extendido en Perú y la región, redactadas de forma original para esta publicación.</p>
+
+    <div class="brand-note">
+      <p><b>Sobre Carnes Delivery Premium.</b> Esta guía fue creada para acompañar a quienes compran cortes premium en Carnes Delivery Premium y quieren sacarles el máximo provecho en casa. La selección del corte es solo el primer paso — esperamos que este libro te ayude con el resto.</p>
+      <p>© Dennis Castro, fundador de Carnes Delivery Premium.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="page-footer">La Biblia del Parrillero Peruano — Del primer carbón al asado perfecto</footer>
+
+</body>
+</html>
